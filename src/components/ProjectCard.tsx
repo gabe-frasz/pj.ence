@@ -47,12 +47,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               initial: { opacity: 0 },
               hover: { opacity: 1 }
             }}
-          >
-            <div className="flex justify-between items-baseline text-white">
-              <h3 className="text-sm font-medium uppercase tracking-wide">{project.title}</h3>
-              <span className="text-xs text-neutral-300">{project.category}</span>
-            </div>
-          </motion.div>
+          />
         </div>
       </Link>
     </motion.div>
