@@ -42,7 +42,10 @@ export default function ProjectDetail() {
           </div>
           <div>
             <p className="mb-2">Serviços</p>
-            <p className="text-white">{project.service}</p>
+            <div
+              dangerouslySetInnerHTML={{ __html: project.service }}
+              className="text-white flex flex-col gap-2"
+            />
           </div>
         </div>
 
@@ -51,14 +54,19 @@ export default function ProjectDetail() {
             {project.tagline}
           </h2>
           <div className="space-y-8 max-w-xl">
-            <p className="text-sm leading-relaxed opacity-70">
-              {project.description}
-            </p>
+            <div
+              dangerouslySetInnerHTML={{ __html: project.description }}
+              className="text-sm leading-relaxed opacity-70 flex flex-col gap-2"
+            />
             <div>
-              <p className="text-[10px] uppercase tracking-widest text-neutral-400 mb-2">Estratégia de design</p>
-              <p className="text-sm leading-relaxed opacity-70">
-                {project.designStrategy}
-              </p>
+              {project.designStrategy && (
+                <>
+                  <p className="text-[10px] uppercase tracking-widest text-neutral-400 mb-2">Estratégia de design</p>
+                  <p className="text-sm leading-relaxed opacity-70">
+                    {project.designStrategy}
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -67,8 +75,8 @@ export default function ProjectDetail() {
       {/* Full Width Image Grid */}
       <section className="flex flex-col gap-[2px]">
         {project.images.map((img, index) => (
-          <div key={index} className="w-full aspect-[16/9] bg-neutral-300">
-            <img src={img} className="w-full h-full object-cover" alt={`Project ${index}`} />
+          <div key={index} className="w-full bg-neutral-300">
+            <img src={img} className="w-full" alt={`Project ${index}`} />
           </div>
         ))}
       </section>

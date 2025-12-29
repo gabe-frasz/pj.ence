@@ -71,7 +71,7 @@ export default function Home() {
                   id: i + 1,
                   title: p.title,
                   category: p.category,
-                  imageUrl: projectDetail?.images[0] || `https://images.unsplash.com/photo-${1500000000000 + i}?w=800&q=80`,
+                  imageUrl: projectDetail?.cardImage ?? projectDetail?.images[0],
                   description: "",
                   client: ""
                 } as any} />
