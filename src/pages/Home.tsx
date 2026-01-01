@@ -106,13 +106,21 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="flex flex-col h-full justify-between min-h-[400px]"
           >
-            <div>
-              <p className="text-lg md:text-xl leading-relaxed text-white max-w-md">
-                João Vitor é um designer com 4 anos de carreira trabalhando com Branding & UI Design. Desenvolveu projetos para startups e também nas industrias de Moda & Gastronomia.
+            <div className="space-y-4">
+              <p className="text-lg md:text-base leading-relaxed text-white max-w-md">
+                Designer com 4 anos de experiência e foco em Branding e UI Design, João Vitor combina pensamento estratégico e execução visual para impulsionar startups e marcas nos setores de Moda e Gastronomia.
+              </p>
+
+              <p className="text-lg md:text-base leading-relaxed text-white max-w-md">
+                Reconhecido pelo seu perfil early adopter, João foi um dos pioneiros no uso de Inteligência Artificial generativa no design brasileiro. Ainda em 2022, aplicou técnicas de engenharia de prompts — antes mesmo da nomenclatura se tornar padrão de mercado — para estruturar a identidade visual e narrativa do projeto Trambit (Web3/NFT).
+              </p>
+
+              <p className="text-lg md:text-base leading-relaxed text-white max-w-md">
+                Sua abordagem une a disciplina do design tradicional com as ferramentas de vanguarda, enxergando a tecnologia como um catalisador para ampliar a visão criativa e entregar projetos que antecipam o futuro do mercado digital.
               </p>
             </div>
             <div className="text-xs text-neutral-500 font-medium">
-              Brasil, SP
+              João Vitor - São Paulo, Brasil.
             </div>
           </motion.div>
 
@@ -130,10 +138,10 @@ export default function Home() {
             />
           </motion.div>
         </div>
-      </section>
+      </section >
 
       {/* Contact Section */}
-      <section id="contact" className="px-6 md:px-12 py-24 md:py-32 bg-black border-t border-neutral-900">
+      < section id="contact" className="px-6 md:px-12 py-24 md:py-32 bg-black border-t border-neutral-900" >
         <div className="flex flex-col md:flex-row justify-between items-start gap-12">
           <motion.h2
             initial={{ opacity: 0, x: -50 }}
@@ -165,9 +173,9 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section >
 
       <Footer />
-    </div>
+    </div >
   );
 }
